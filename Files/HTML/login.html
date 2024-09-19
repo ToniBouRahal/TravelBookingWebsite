@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Just Travel</title>
+    <link rel="stylesheet" href="../CSS/login.css">
+    <script defer src = "../JavaScript/booking.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="background"></div>
+    <div class="container">
+        <div class="item">
+            <i id = "backHome" class="fa fa-arrow-left " aria-hidden="true"></i>
+            <h2  class="logo"><i class='bx bxl-xing'></i>Just Travel</h2>
+
+            <div class="text-item">
+                <h2>Welcome! <br><span>
+                    To Our Family
+                </span></h2>
+                <p style="color:#fc0050">Helping you travel beyond boundaries and borders.</p>
+                <div class="social-icon">
+                    <a href="#"><i class='bx bxl-facebook'></i></a>
+                    <a href="#"><i class='bx bxl-twitter'></i></a>
+                    <a href="#"><i class='bx bxl-youtube'></i></a>
+                    <a href="#"><i class='bx bxl-instagram'></i></a>
+                    <a href="#"><i class='bx bxl-linkedin'></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="login-section">
+            <div class="form-box login">
+                <form action="javascript:redirect()">
+                    <h2>Sign In</h2>
+                    <div class="input-box">
+                        <span class="icon"><i class='bx bxs-envelope'></i></span>
+                        <input type="email" id ="log_email" required onchange="reverse()" >
+                        <label >Email</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><i class='bx bxs-lock-alt' ></i></span>
+                        <input type="password" id = "log_pass"required>
+                        <label>Password</label>
+                    </div>
+                    <div class="remember-password">
+                        <label for=""><input type="checkbox">Remember Me</label>
+                        <a href="#">Forget Password</a>
+                    </div>
+                    <div class="create-account">
+                        <p>Create A New Account? <a href="signup.html" class="register-link">Sign Up</a></p>
+                    </div>
+                    <button class="btn" id="login" type = 'submit' onclick="redirect()">Log In</button>
+                </form>
+
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+var backHome= document.getElementById("backHome")
+backHome.addEventListener('click' , e =>{
+    window.location.href='index.html'
+})
+function reverse(){
+    var log_pass = document.getElementById("log_pass")
+    var log_email = document.getElementById("log_email")
+    if(log_email.value !== ""){
+        log_email.style.borderBottom = "2px solid red"
+    }
+}
+
+    </script>
+
+</body>
+
+</html>

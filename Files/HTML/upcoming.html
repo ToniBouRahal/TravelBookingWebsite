@@ -1,0 +1,236 @@
+
+
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Just Travels</title>
+<link rel="icon" href="../../Assets/logo.png">
+<link rel="stylesheet" type="text/css" href="../CSS/style.css">
+<link rel="JavaScript" type="text/css" href="../JavaScript/script.js">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet"
+href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+}
+a {
+    color:inherit;
+    text-decoration:none;
+}
+body,html
+{
+  overflow:hidden;
+  height:100%;
+  font-size:16px;
+  font-family: 'Montserrat', sans-serif;
+  background:#000;
+  color:#fff;
+}
+#wrap{
+  position:absolute;
+  left:0; top:0;
+  width:150%;
+  height:100%;
+  display:flex;
+  align-items:stretch;
+  margin:0 25%;
+}
+.hb {
+  position:relative;
+  width:25%;
+  z-index:1;
+  display:flex;
+  align-items:center;
+  z-index:2;
+  transform:scale(.97);
+}
+.c{
+  position:relative;
+  display:block;
+  max-width:90%;
+}
+.c img {
+  position:relative;
+  display:block;
+  width:100%;
+  height:auto;
+  z-index:2;
+}
+.txt {
+  position:absolute;
+  top:100%; left:10%;
+  width:80%;
+  opacity:0;
+  padding:1em 0 0 1em;
+  border-left:1px solid;
+  z-index:1;
+  transform:scaleY(1) translateY(-50px);
+  transition:transform .2s, opacity .5s;
+}
+h1 {
+  font-size:1.2em;
+  font-weight:700;
+  text-transform:uppercase;
+}
+.hb:hover .txt {
+  opacity:1;
+  transform:scaleY(1) translateY(0);
+}
+.fullBg {
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  opacity:0;
+  transition:transform .5s, opacity .5s;
+  transform:scale(1);
+  z-index:1;
+}
+.fullBg img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  opacity:.5;
+}
+.hb:hover + .fullBg {
+    opacity:1;transform:scale(1.02);
+}
+
+.navbar
+{
+    z-index:999;
+}
+
+</style>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <nav>
+        <img src="../../Assets/logo.png" class="logo" alt="Logo" title="JustTravels">
+        <ul class="navbar">
+            <li>
+                <a href="index.html">Home</a>
+                 <div class="dropdown">
+                    <a href="#">Booking</a>
+                    <div class="dropdown-content">
+                        <a href="request.html">Request</a>
+                        <a href="booking.html">Book</a>
+                    </div>
+
+                    
+                  </div>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact Us</a>
+               
+                <div class="dropdown">
+                    <a href="#">Locations</a>
+                    <div class="dropdown-content">
+                        <a href="locations.html">locations</a>
+                        <a href="upcoming.html">Upcoming</a>
+                    </div>
+                </div>
+                <a href="login.html">Login</a>
+            </li>
+        </ul>
+    </nav>
+
+
+
+<div id="wrap">
+  <a href="#" class="hb">
+    <div class="c">
+      <img src="../../Assets/sweden.jpg" alt=""/>
+      <div class="txt">
+        <h1>Sweden</h1>
+        <p>Explore scenic landscapes and charming cities.</p>
+      </div>
+    </div>
+  </a>
+  <div class="fullBg">
+    <img src="../../Assets/sweden.jpg" alt=""/>
+  </div>
+  <a href="#" class="hb">
+    <div class="c">
+      <img src="../../Assets/egypt.jpg" alt=""/>
+      <div class="txt">
+        <h1>Egypt</h1>
+        <p>Discover ancient wonders and vibrant culture.</p>
+      </div>
+    </div>
+  </a>
+  <div class="fullBg">
+    <img src="../../Assets/egypt.jpg" alt=""/>
+  </div>
+  <a href="#" class="hb">
+    <div class="c">
+      <img src="../../Assets/Norway.jpg" alt=""/>
+      <div class="txt">
+        <h1>Norway</h1>
+        <p>Immerse yourself in majestic fjords and Northern Lights.</p>
+      </div>
+    </div>
+  </a>
+  <div class="fullBg">
+    <img src="../../Assets/Norway.jpg" alt=""/>
+  </div>
+  <a href="#" class="hb">
+    <div class="c">
+      <img src="../../Assets/Australia.jpg" alt=""/>
+      <div class="txt">
+        <h1>Australia</h1>
+        <p>Experience stunning natural beauty and laid-back lifestyle.</p>
+      </div>
+    </div>
+  </a>
+  <div class="fullBg">
+    <img src="../../Assets/Australia.jpg" alt=""/>
+  </div>
+</div>
+
+
+
+
+
+
+<script>
+    $(document).ready(function(){
+        var docWidth = $('body').width(),
+            $wrap = $('#wrap'),
+            $images = $('#wrap .hb'),
+            slidesWidth = $wrap.width();
+        
+        $(window).on('resize', function(){
+          docWidth = $('body').width();
+          slidesWidth = $wrap.width();
+        })
+        
+        $(document).mousemove(function(e) {
+          var mouseX = e.pageX,
+              offset = mouseX / docWidth * slidesWidth - mouseX / 2;
+          
+          $images.css({
+            '-webkit-transform': 'translate3d(' + -offset + 'px,0,0)',
+                    'transform': 'translate3d(' + -offset + 'px,0,0)'
+          });
+        });
+      })
+      </script>
+
+
+
+
+
+</body>
+</html>

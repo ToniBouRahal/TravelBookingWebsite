@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="icon" href="../../Assets/logo.png">
+    <link rel="stylesheet" type="text/css" href="../CSS/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">   
+    <link rel="stylesheet"href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+    
+</head>
+<body>
+	<nav>
+        <img src="../../Assets/logo.png" class="logo" alt="Logo" title="JustTravels">
+        <ul class="navbar">
+            <li>
+                <a href="index.html">Home</a>
+                 <div class="dropdown">
+                    <a href="#">Booking</a>
+                    <div class="dropdown-content">
+                        <a href="request.html">Request</a>
+                        <a href="booking.html">Book</a>
+                    </div>
+
+                    
+                </div>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact Us</a>
+               
+                <div class="dropdown">
+                    <a href="#">Locations</a>
+                    <div class="dropdown-content">
+                        <a href="locations.html">locations</a>
+                        <a href="upcoming.html">Upcoming</a>
+                    </div>
+                </div>
+                <a href="login.html">Login</a>
+            </li>
+        </ul>
+    </nav>
+	<div class="booking-filter">
+		<form class="booking-form">
+		  <label class="booking-label" for="search">Destination:</label>
+		  <input class="booking-input"  onkeyup="reshape()" type="text" id="search" name="destination" placeholder="Enter destination...">
+		  
+		  <label class="booking-label" for="start-date">From:</label>
+		  <input class="booking-input" type="date" id="start-date" name="start-date">
+		  
+		  <label class="booking-label" for="end-date">To:</label>
+		  <input class="booking-input" type="date" id="end-date" name="end-date">
+		  
+		  <label class="booking-label" for="num-people">Number of people:</label>
+		  <input class="booking-input" type="number" id="num-people" name="num-people" min="1" max="10" value="1">
+		  
+		  <button class="booking-button" >Refresh</button>
+		</form>
+	  </div>
+	  
+	  
+	<div class="Book-container" id ="bc">
+		<h1 style="text-align: center;">DESTINATIONS</h1>
+		<div class="book" id ='1'>
+		<div class="place" name="san fransisco">
+			<img src="../../Assets/destination-1.jpg" width="100" height="100" alt="Place 1" class="place-img">
+			<h2 class="place-title">san francisco</h2>
+			<p class="place-price">$100</p>
+			<div class="rating">
+				<span class="fa fa-star checked"></span>
+				<span class="fa fa-star checked"></span>
+				<span class="fa fa-star checked"></span>
+				<span class="fa fa-star"></span>
+				<span class="fa fa-star"></span>
+			  </div>			  
+			<p class="place-description">a vibrant city located on the west coast of the United States, known for its diverse culture, scenic beauty, and iconic landmarks like the Golden Gate Bridge and Alcatraz Island.</p>
+			<a href="#" class="book-btn" onclick="booked(this)">Book Now</a>
+		</div>
+		<div class="place" name ="london">
+			<img src="../../Assets/destination-2.jpg" alt="Place 2" class="place-img">
+			<h2 class="place-title">London</h2>
+			<p class="place-price">$150</p>
+			<div class="rating">
+				<span class="fa fa-star checked"></span>
+				<span class="fa fa-star checked"></span>
+				<span class="fa fa-star checked"></span>
+				<span class="fa fa-star"></span>
+				<span class="fa fa-star"></span>
+			  </div>			  
+			<p class="place-description"> London is a cosmopolitan city that blends history with modernity. Some of its iconic landmarks include Buckingham Palace, the Tower of London, and Big Ben..</p>
+			<a href="#" class="book-btn" onclick="booked(this)">Book Now</a>
+		</div>
+		<div class="place" name="paris">
+			<img src="../../Assets/destination-3.jpg" alt="Place 3" class="place-img">
+			<h2 class="place-title">Paris</h2>
+			<p class="place-price">$120</p>
+			<div class="rating">
+				<span class="fa fa-star checked"></span>
+				<span class="fa fa-star checked"></span>
+				<span class="fa fa-star checked"></span>
+				<span class="fa fa-star"></span>
+				<span class="fa fa-star"></span>
+			  </div>			  
+			<p class="place-description">Paris is often called the "City of Light" and is known for its art, fashion, and cuisine. Some of the city's most famous attractions include the Eiffel Tower, the Louvre Museum, and Notre-Dame Cathedral.</p>
+			<a href="#" class="book-btn" onclick="booked(this)">Book Now</a>
+		</div>
+		</div>
+		<div class="book" id = '2'>
+		<div class="place" name = 'sydney'>
+			<img src="../../Assets/destination-4.jpg" alt="Place 4" class="place-img">
+			<h2 class="place-title">Sydney</h2>
+			<p class="place-price">$90</p>
+			<div class="rating">
+				<span class="fa fa-star checked"></span>
+				<span class="fa fa-star checked"></span>
+				<span class="fa fa-star checked"></span>
+				<span class="fa fa-star"></span>
+				<span class="fa fa-star"></span>
+			  </div>			  
+			<p class="place-description"> a bustling city on Australia's east coast, known for its stunning beaches, world-famous Opera House, and unique wildlife. Visitors can also explore historic neighborhoods like The Rocks and Darlinghurst.</p>
+			<a href="#" class="book-btn" onclick="booked(this)">Book Now</a>
+		</div>
+		<div class="place" name = 'new york'>
+			<img src="../../Assets/destination-5.jpg" alt="Place 5" class="place-img">
+			<h2 class="place-title">New York</h2>
+			<p class="place-price">$80</p>
+			<div class="rating">
+				<span class="fa fa-star checked"></span>
+				<span class="fa fa-star checked"></span>
+				<span class="fa fa-star checked"></span>
+				<span class="fa fa-star"></span>
+				<span class="fa fa-star"></span>
+			  </div>			  
+			<p class="place-description">New York is one of the most famous cities in the world, From the bright lights of Times Square to the greenery of Central Park, visitors will never run out of things to do in this city that never sleeps.</p>
+			<a href="#" class="book-btn" onclick="booked(this)">Book Now</a>
+		</div>
+		<div class="place" name = 'istanbul'>
+			<img src="../../Assets/destination-6.jpg" alt="Place 6" class="place-img">
+			<h2 class="place-title">Istanbul</h2>
+			<p class="place-price">$100</p>
+			<div class="rating">
+				<span class="fa fa-star checked"></span>
+				<span class="fa fa-star checked"></span>
+				<span class="fa fa-star checked"></span>
+				<span class="fa fa-star"></span>
+				<span class="fa fa-star"></span>
+			  </div>			  
+			<p class="place-description">a city that bridges Europe and Asia, and is filled with history, culture, and stunning architecture. Some must-see attractions include the Hagia Sophia, Blue Mosque, and Grand Bazaar.</p>
+			<a href="#" class="book-btn" onclick="booked(this)">Book Now</a>
+			</div>
+		</div>
+		<div class="book" id='3' >
+			<div class="place" id ="adder" onload="checkA()">
+				<i id ="add"  onclick="add_fn()" class="fa fa-plus fa-6x"></i>
+			</div>
+		</div>
+	</div>
+	<div class = "popup" id = "pop">
+		<h2><i id = "close" class="fa fa-window-close" aria-hidden="true"></i></h2>
+		<br>
+		<div class="register-section" id ='r'>
+			<div class="form-box" id ="step1">
+				<form action="">
+					<select name="month" id="city" class ="cities">
+						<option value="BE">Berlin</option>
+						<option value="SH">StockHolm</option>
+						<option value="MI">Milan</option>
+					</select>
+					<div class="input-box">
+						<input type="text" id ="price">
+						<label >price</label>
+					</div>
+					<br>
+					<div class="input-box">
+						<input type="text" id ="description">
+						<label >Description</label>
+					</div>
+				</form>
+				<button class="btn" id="packageAdder">Add</button>
+	</div>
+		</div>
+	</div>
+	<section class="footer">
+		<div class="foot">
+			<div class="footer-content">
+				
+				<div class="footlinks">
+					<h4>Quick Links</h4>
+					<ul>
+						<li><a href="signup.html">Sign UP</a></li>
+						<li><a href="about.html">About Us</a></li>
+						<li><a href="contact.html">Contact Us</a></li>
+					</ul>
+				</div>
+	
+				<div class="footlinks">
+					<h4>Connect</h4>
+					<div class="social">
+						<a href="#" target="_blank"><i class='bx bxl-facebook'></i></a>
+						<a href="#" target="_blank"><i class='bx bxl-instagram' ></i></a>
+						<a href="#" target="_blank"><i class='bx bxl-twitter' ></i></a>
+						<a href="#" target="_blank"><i class='bx bxl-linkedin' ></i></a>
+						<a href="#" target="_blank"><i class='bx bxl-youtube' ></i></a>
+						<a href="#" target="_blank"><i class='bx bxl-wordpress' ></i></a>
+						<a href="#" target="_blank"><i class='bx bxl-github'></i></a>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	
+		<div class="end">
+			<p>Copyright © 2023 Just Travel  All Rights Reserved.<br>Website developed by:Tony</p>
+		</div>
+	</section>
+	
+		<script src="../JavaScript/booking.js"></script>
+</body>
+</html>
